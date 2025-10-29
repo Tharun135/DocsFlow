@@ -79,8 +79,16 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/Tharun135/DocsFlow
+      name: GitHub Repository
     - icon: fontawesome/brands/docker
-      link: https://hub.docker.com/r/docsflow/pipeline
+      link: https://docs.docker.com/
+      name: Docker Documentation
+    - icon: fontawesome/solid/rocket
+      link: https://www.mkdocs.org/
+      name: MkDocs
+    - icon: fontawesome/solid/cogs
+      link: https://www.jenkins.io/
+      name: Jenkins CI/CD
 
 # Copyright
 copyright: Copyright &copy; 2024 DocsFlow Team
