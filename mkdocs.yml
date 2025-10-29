@@ -68,8 +68,9 @@ markdown_extensions:
 # Plugins
 plugins:
   - search
-  - git-revision-date-localized:
-      enable_creation_date: true
+  # Uncomment the following line if you have git-revision-date-localized-plugin installed
+  # - git-revision-date-localized:
+  #     enable_creation_date: true
 
 # Extra
 extra:

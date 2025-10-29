@@ -28,12 +28,12 @@ install-dev: ## Install development dependencies
 # Documentation build
 build: ## Build documentation site
 	@echo "🏗️  Building documentation..."
-	mkdocs build --clean --strict
+	.venv/Scripts/python.exe -m mkdocs build --clean --strict
 	@echo "✅ Documentation built successfully"
 
 serve: ## Serve documentation locally
 	@echo "🚀 Starting development server..."
-	mkdocs serve --dev-addr localhost:8000
+	.venv/Scripts/python.exe -m mkdocs serve --dev-addr localhost:8000
 
 # Quality checks
 lint: ## Run documentation linting
@@ -133,8 +133,8 @@ release-check: ## Check if ready for release
 info: ## Show project information
 	@echo "DocsFlow Project Information"
 	@echo "==========================="
-	@echo "Python version: $$(python --version)"
-	@echo "MkDocs version: $$(mkdocs --version)"
+	@echo "Python version: $$(.venv/Scripts/python.exe --version 2>/dev/null || python --version)"
+	@echo "MkDocs version: $$(.venv/Scripts/python.exe -m mkdocs --version 2>/dev/null || echo 'MkDocs not installed')"
 	@echo "Docker version: $$(docker --version 2>/dev/null || echo 'Docker not installed')"
 	@echo "Current branch: $$(git branch --show-current 2>/dev/null || echo 'Not a git repository')"
 	@echo "Last commit: $$(git log -1 --oneline 2>/dev/null || echo 'No commits')"
