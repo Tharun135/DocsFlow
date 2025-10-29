@@ -1,0 +1,85 @@
+site_name: DocsFlow - Automated Documentation Pipeline
+site_description: End-to-end CI/CD pipeline for automated documentation delivery using DevOps tools
+site_author: DocsFlow Team
+site_url: https://your-organization.github.io/DocsFlow
+
+# Repository
+repo_name: Tharun135/DocsFlow
+repo_url: https://github.com/Tharun135/DocsFlow
+edit_uri: edit/main/docs/
+
+# Configuration
+docs_dir: docs
+site_dir: site
+
+# Navigation
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Style Guide: style-guide.md
+
+# Theme
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.share
+    - content.code.copy
+  icon:
+    repo: fontawesome/brands/github
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - tables
+  - footnotes
+
+# Plugins
+plugins:
+  - search
+  - git-revision-date-localized:
+      enable_creation_date: true
+
+# Extra
+extra:
+  version:
+    provider: mike
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Tharun135/DocsFlow
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/r/docsflow/pipeline
+
+# Copyright
+copyright: Copyright &copy; 2024 DocsFlow Team

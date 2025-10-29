@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  docsflow:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+      - /app/site  # Exclude build directory from mount
+    environment:
+      - PYTHONPATH=/app
+    command: mkdocs serve --dev-addr=0.0.0.0:8000
+    
+  docsflow-build:
+    build: .
+    volumes:
+      - .:/app
+      - ./site:/app/site
+    environment:
+      - PYTHONPATH=/app
+    command: mkdocs build --clean
+    
+  docsflow-lint:
+    build: .
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONPATH=/app
+    command: python scripts/lint_docs.py

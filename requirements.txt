@@ -1,0 +1,24 @@
+# MkDocs and documentation
+mkdocs>=1.5.3
+mkdocs-material>=9.4.0
+mkdocs-git-revision-date-localized-plugin>=1.2.0
+
+# Python scripting dependencies
+requests>=2.31.0
+PyYAML>=6.0.1
+
+# Documentation linting and validation
+markdown>=3.5.0
+beautifulsoup4>=4.12.0
+
+# Development and testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+
+# Security and code quality
+bandit>=1.7.0
+safety>=2.3.0
+
+# Utility packages
+python-dotenv>=1.0.0
+click>=8.1.0
